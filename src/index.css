@@ -4,50 +4,52 @@
 
 @layer base {
   :root {
-    --background: 220 15% 6%;
-    --foreground: 45 20% 92%;
+    /* Фон — глубокий индиго с тёплым синим оттенком */
+    --background: 228 28% 8%;
+    --foreground: 38 25% 92%;
 
-    --card: 220 15% 9%;
-    --card-foreground: 45 20% 92%;
+    --card: 228 25% 11%;
+    --card-foreground: 38 25% 92%;
 
-    --popover: 220 15% 9%;
-    --popover-foreground: 45 20% 92%;
+    --popover: 228 25% 11%;
+    --popover-foreground: 38 25% 92%;
 
-    --primary: 43 65% 62%;
-    --primary-foreground: 220 15% 6%;
+    /* Акцент — терракотово-медный */
+    --primary: 20 60% 58%;
+    --primary-foreground: 228 28% 8%;
 
-    --secondary: 220 12% 14%;
-    --secondary-foreground: 45 20% 92%;
+    --secondary: 228 20% 16%;
+    --secondary-foreground: 38 25% 92%;
 
-    --muted: 220 12% 14%;
-    --muted-foreground: 220 10% 55%;
+    --muted: 228 20% 16%;
+    --muted-foreground: 228 15% 56%;
 
-    --accent: 43 65% 62%;
-    --accent-foreground: 220 15% 6%;
+    --accent: 20 60% 58%;
+    --accent-foreground: 228 28% 8%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 12% 16%;
-    --input: 220 12% 16%;
-    --ring: 43 65% 62%;
+    --border: 228 18% 18%;
+    --input: 228 18% 18%;
+    --ring: 20 60% 58%;
 
     --radius: 0.25rem;
 
-    --gold: 43 65% 62%;
-    --gold-light: 43 65% 75%;
-    --gold-dark: 43 55% 45%;
-    --surface: 220 15% 9%;
-    --surface-2: 220 12% 12%;
+    --gold: 20 60% 58%;
+    --gold-light: 20 60% 72%;
+    --gold-dark: 20 52% 42%;
+    --surface: 228 25% 11%;
+    --surface-2: 228 22% 14%;
 
-    --sidebar-background: 220 15% 6%;
-    --sidebar-foreground: 45 20% 92%;
-    --sidebar-primary: 43 65% 62%;
-    --sidebar-primary-foreground: 220 15% 6%;
-    --sidebar-accent: 220 12% 14%;
-    --sidebar-accent-foreground: 45 20% 92%;
-    --sidebar-border: 220 12% 16%;
-    --sidebar-ring: 43 65% 62%;
+    --sidebar-background: 228 28% 8%;
+    --sidebar-foreground: 38 25% 92%;
+    --sidebar-primary: 20 60% 58%;
+    --sidebar-primary-foreground: 228 28% 8%;
+    --sidebar-accent: 228 20% 16%;
+    --sidebar-accent-foreground: 38 25% 92%;
+    --sidebar-border: 228 18% 18%;
+    --sidebar-ring: 20 60% 58%;
   }
 }
 
@@ -192,8 +194,12 @@
   }
 
   .btn-gold {
-    background: linear-gradient(135deg, hsl(43, 65%, 62%), hsl(43, 55%, 50%));
-    color: hsl(220, 15%, 6%);
+    background: linear-gradient(
+      135deg,
+      hsl(var(--gold)),
+      hsl(var(--gold-dark))
+    );
+    color: hsl(var(--background));
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 0.75rem;
@@ -206,9 +212,13 @@
     display: inline-block;
   }
   .btn-gold:hover {
-    background: linear-gradient(135deg, hsl(43, 65%, 70%), hsl(43, 60%, 58%));
+    background: linear-gradient(
+      135deg,
+      hsl(var(--gold-light)),
+      hsl(var(--gold))
+    );
     transform: translateY(-1px);
-    box-shadow: 0 8px 30px hsl(43, 65%, 62%, 0.25);
+    box-shadow: 0 8px 30px hsl(var(--gold) / 0.3);
   }
 
   .btn-outline-gold {
