@@ -59,152 +59,50 @@ export default function Index() {
       </nav>
 
       {/* HERO SECTION */}
-      <section className="relative min-h-screen flex flex-col overflow-hidden">
-        {/* Background */}
+      <section className="relative min-h-[92vh] flex items-end overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${HERO_IMAGE})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/60 to-transparent" />
 
-        {/* Top: heading */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-16 pb-10 w-full flex-1 flex flex-col justify-center">
-          <p className="section-label mb-5 animate-fade-in-up delay-100">
-            Профессиональное управление капиталом
-          </p>
-          <h1 className="font-display text-5xl sm:text-6xl lg:text-[5.5rem] font-light leading-[0.93] text-foreground mb-4 animate-fade-in-up delay-200">
-            Инвестиции<br />
-            <em className="text-gold not-italic">в недвижимость</em>
-          </h1>
-          <p className="font-body text-sm text-muted-foreground max-w-md animate-fade-in-up delay-300" style={{ fontWeight: 300 }}>
-            Выберите свой уровень — и мы подберём стратегию, которая работает именно для вас.
-          </p>
-        </div>
-
-        {/* Bottom: 3 segment cards */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pb-10 w-full animate-fade-in-up delay-400">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-border">
-
-            {/* Segment 1 */}
-            <a
-              href="#beginner"
-              className="group relative flex flex-col justify-between p-8 border-r border-border bg-surface/60 backdrop-blur-sm transition-all duration-500 hover:bg-gold/[0.07] cursor-pointer"
-            >
-              <div>
-                <div className="flex items-center justify-between mb-6">
-                  <span className="font-body text-[0.55rem] tracking-[0.3em] uppercase text-muted-foreground">Уровень I</span>
-                  <div className="w-6 h-6 border border-border flex items-center justify-center group-hover:border-gold/50 transition-colors">
-                    <Icon name="ArrowRight" size={12} className="text-muted-foreground group-hover:text-gold transition-colors" />
-                  </div>
-                </div>
-                <div className="font-display text-4xl sm:text-5xl font-light text-foreground mb-2 leading-none">
-                  Начинающие
-                </div>
-                <div className="h-px bg-border my-5 group-hover:bg-gold/30 transition-colors" />
-                <p className="font-body text-xs text-muted-foreground leading-relaxed" style={{ fontWeight: 300 }}>
-                  Первые шаги в инвестициях. Понятные инструменты, сопровождение на каждом этапе.
-                </p>
-              </div>
-              <div className="mt-8 flex items-end justify-between">
-                <div>
-                  <div className="font-body text-[0.6rem] tracking-widest uppercase text-muted-foreground mb-1">Доходность</div>
-                  <div className="font-display text-3xl text-gold font-light">10–13%</div>
-                </div>
-                <div className="text-right">
-                  <div className="font-body text-[0.6rem] tracking-widest uppercase text-muted-foreground mb-1">Вход от</div>
-                  <div className="font-display text-2xl text-foreground font-light">1 млн ₽</div>
-                </div>
-              </div>
-              {/* Active hover bar */}
-              <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gold scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-            </a>
-
-            {/* Segment 2 */}
-            <a
-              href="#experienced"
-              className="group relative flex flex-col justify-between p-8 border-r border-border bg-surface/80 backdrop-blur-sm transition-all duration-500 hover:bg-gold/[0.07] cursor-pointer"
-            >
-              {/* "Popular" badge */}
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                <span className="font-body text-[0.5rem] tracking-[0.25em] uppercase bg-gold text-background px-3 py-1 whitespace-nowrap">
-                  Популярно
-                </span>
-              </div>
-              <div>
-                <div className="flex items-center justify-between mb-6">
-                  <span className="font-body text-[0.55rem] tracking-[0.3em] uppercase text-muted-foreground">Уровень II</span>
-                  <div className="w-6 h-6 border border-border flex items-center justify-center group-hover:border-gold/50 transition-colors">
-                    <Icon name="ArrowRight" size={12} className="text-muted-foreground group-hover:text-gold transition-colors" />
-                  </div>
-                </div>
-                <div className="font-display text-4xl sm:text-5xl font-light text-foreground mb-2 leading-none">
-                  Опытные
-                </div>
-                <div className="h-px bg-border my-5 group-hover:bg-gold/30 transition-colors" />
-                <p className="font-body text-xs text-muted-foreground leading-relaxed" style={{ fontWeight: 300 }}>
-                  Коммерческая недвижимость, flip-стратегии, портфельная диверсификация.
-                </p>
-              </div>
-              <div className="mt-8 flex items-end justify-between">
-                <div>
-                  <div className="font-body text-[0.6rem] tracking-widest uppercase text-muted-foreground mb-1">Доходность</div>
-                  <div className="font-display text-3xl text-gold font-light">15–22%</div>
-                </div>
-                <div className="text-right">
-                  <div className="font-body text-[0.6rem] tracking-widest uppercase text-muted-foreground mb-1">Вход от</div>
-                  <div className="font-display text-2xl text-foreground font-light">10 млн ₽</div>
-                </div>
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gold scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-            </a>
-
-            {/* Segment 3 */}
-            <a
-              href="#major"
-              className="group relative flex flex-col justify-between p-8 bg-surface/60 backdrop-blur-sm transition-all duration-500 hover:bg-gold/[0.07] cursor-pointer"
-            >
-              <div>
-                <div className="flex items-center justify-between mb-6">
-                  <span className="font-body text-[0.55rem] tracking-[0.3em] uppercase text-muted-foreground">Уровень III</span>
-                  <div className="w-6 h-6 border border-border flex items-center justify-center group-hover:border-gold/50 transition-colors">
-                    <Icon name="ArrowRight" size={12} className="text-muted-foreground group-hover:text-gold transition-colors" />
-                  </div>
-                </div>
-                <div className="font-display text-4xl sm:text-5xl font-light text-foreground mb-2 leading-none">
-                  Крупные
-                </div>
-                <div className="h-px bg-border my-5 group-hover:bg-gold/30 transition-colors" />
-                <p className="font-body text-xs text-muted-foreground leading-relaxed" style={{ fontWeight: 300 }}>
-                  Институциональные сделки, ЗПИФ, зарубежные объекты, доверительное управление.
-                </p>
-              </div>
-              <div className="mt-8 flex items-end justify-between">
-                <div>
-                  <div className="font-body text-[0.6rem] tracking-widest uppercase text-muted-foreground mb-1">Доходность</div>
-                  <div className="font-display text-3xl text-gold font-light">20–28%</div>
-                </div>
-                <div className="text-right">
-                  <div className="font-body text-[0.6rem] tracking-widest uppercase text-muted-foreground mb-1">Вход от</div>
-                  <div className="font-display text-2xl text-foreground font-light">50 млн ₽</div>
-                </div>
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gold scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-            </a>
-
+        <div className="relative z-10 max-w-7xl mx-auto px-6 pb-20 w-full">
+          <div className="max-w-3xl animate-fade-in-up">
+            <p className="section-label mb-6 animate-fade-in-up delay-100">
+              Профессиональное управление капиталом
+            </p>
+            <h1 className="font-display text-5xl sm:text-6xl lg:text-8xl font-light leading-[0.95] text-foreground mb-8 animate-fade-in-up delay-200">
+              Недвижимость<br />
+              <em className="text-gold not-italic">как инструмент</em><br />
+              роста капитала
+            </h1>
+            <p className="font-body text-sm leading-relaxed text-muted-foreground max-w-lg mb-12 animate-fade-in-up delay-300" style={{ fontWeight: 300 }}>
+              Мы помогаем инвесторам любого уровня превращать капитал в стабильный доход через тщательно отобранные объекты жилой и коммерческой недвижимости.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-400">
+              <a href="#beginner" className="btn-gold">
+                Начать инвестировать
+              </a>
+              <a href="#experienced" className="btn-outline-gold">
+                Узнать об условиях
+              </a>
+            </div>
           </div>
 
-          {/* Stats strip */}
-          <div className="grid grid-cols-4 gap-px bg-border mt-px">
+          {/* Stats bar */}
+          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-px bg-border animate-fade-in-up delay-500">
             {[
               { num: '12+', label: 'лет на рынке' },
               { num: '₽ 8,4 млрд', label: 'под управлением' },
               { num: '340+', label: 'успешных сделок' },
               { num: '18%', label: 'средняя доходность' },
             ].map(({ num, label }) => (
-              <div key={label} className="bg-surface px-5 py-4">
-                <div className="font-display text-2xl text-gold font-light leading-none">{num}</div>
-                <div className="font-body text-[0.6rem] text-muted-foreground tracking-wider uppercase mt-1.5">{label}</div>
+              <div key={label} className="bg-surface px-6 py-5">
+                <div className="stat-number text-3xl sm:text-4xl">{num}</div>
+                <div className="font-body text-xs text-muted-foreground tracking-wider uppercase mt-1" style={{ fontWeight: 400 }}>
+                  {label}
+                </div>
               </div>
             ))}
           </div>
